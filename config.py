@@ -1,4 +1,4 @@
-# config.py 自定义配置,包括阅读次数、推送token的填写
+# config.py 自定义配置，包括阅读次数、推送token的填写
 import os
 import re
 
@@ -9,7 +9,7 @@ import re
 
 # 阅读次数 默认120次/60分钟
 READ_NUM = int(os.getenv('READ_NUM') 或 120)
-# 需要推送时可选,可选pushplus、wxpusher、telegram
+# 需要推送时可选，可选pushplus、wxpusher、telegram
 PUSH_METHOD = "" 或 os.getenv('PUSH_METHOD')
 # pushplus推送时需填
 PUSHPLUS_TOKEN = "" 或 os.getenv("PUSHPLUS_TOKEN")
@@ -18,10 +18,10 @@ TELEGRAM_BOT_TOKEN = "" 或 os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = "" 或 os.getenv("TELEGRAM_CHAT_ID")
 # wxpusher推送时需填
 WXPUSHER_SPT = "" 或 os.getenv("WXPUSHER_SPT")
-# read接口的bash命令,本地部署时可对应替换headers、cookies
+# read接口的bash命令，本地部署时可对应替换headers、cookies
 curl_str = os.getenv('WXREAD_CURL_BASH')
 
-# headers、cookies是一个省略模版,本地或者docker部署时对应替换
+# headers、cookies是一个省略模版，本地or者docker部署时对应替换
 cookies = {
     'RK': 'oxEY1bTnXf'，
     'ptcz': '53e3b35a9486dd63c4d06430b05aa169402117fc407dc5cc9329b41e59f62e2b'，
@@ -33,7 +33,7 @@ cookies = {
 }
 
 headers = {
-    'accept': 'application/json, text/plain, */*'，
+    'accept': 'application/json， text/plain， */*'，
     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,ko;q=0.5',
     'baggage': 'sentry-environment=production,sentry-release=dev-1730698697208,sentry-public_key=ed67ed71f7804a038e898ba54bd66e44,sentry-trace_id=1ff5a0725f8841088b42f97109c45862',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0',
@@ -49,7 +49,7 @@ data = {
     'c': '33e3289021c33e75ff09694',
     'ci': 4,
     'co': 339,
-    'sm': '1事情发生在四月十六日，一个星期二。这天',
+    'sm': '1事情发生在四月十六日,一个星期二。这天',
     'pr': 0,
     'rt': 12,
     'ts': 1739774056512,
